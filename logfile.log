@@ -1,0 +1,6 @@
+{"level":"info","time":"2024-01-20T16:45:16.330+0800","message":"This is an info message"}
+{"level":"warn","time":"2024-01-20T16:45:16.340+0800","message":"This is a warning message","key":"value"}
+{"level":"error","time":"2024-01-20T16:45:16.340+0800","message":"This is an error message","error":"sample error"}
+{"level":"fatal","time":"2024-01-21T14:42:37.883+0800","message":"connect to my sql failed:Error 1049 (42000): Unknown database 'mysql_container'"}
+{"level":"info","time":"2024-01-21T14:44:15.440+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-21T14:44:15.461+0800","message":"init redis success"}
