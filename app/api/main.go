@@ -14,7 +14,6 @@ func main() {
 	initialize.SetupDatabase()
 	config := global.ConfigName.SeverConfig
 	gin.SetMode(config.Mode)
-
 	global.Logger.Info("init server success", zap.String("port", config.Port+":"+config.Port))
 	err := router.InitRouter(config.Port)
 	if err != nil {

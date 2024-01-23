@@ -4,3 +4,58 @@
 {"level":"fatal","time":"2024-01-21T14:42:37.883+0800","message":"connect to my sql failed:Error 1049 (42000): Unknown database 'mysql_container'"}
 {"level":"info","time":"2024-01-21T14:44:15.440+0800","message":"init mysql success"}
 {"level":"info","time":"2024-01-21T14:44:15.461+0800","message":"init redis success"}
+{"level":"fatal","time":"2024-01-23T16:53:29.452+0800","message":"connect to my sql failed:dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"info","time":"2024-01-23T23:16:56.860+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-23T23:16:56.876+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-23T23:16:56.876+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-23T23:27:00.300+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-23T23:27:00.316+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-23T23:27:00.317+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-23T23:36:39.673+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-23T23:36:39.686+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-23T23:36:39.687+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-23T23:44:00.107+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-23T23:44:00.122+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-23T23:44:00.122+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-23T23:49:49.757+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-23T23:49:49.773+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-23T23:49:49.774+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-23T23:50:44.543+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-23T23:50:44.557+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-23T23:50:44.557+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-23T23:52:14.719+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-23T23:52:14.735+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-23T23:52:14.736+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-23T23:57:53.254+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-23T23:57:53.271+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-23T23:57:53.272+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-23T23:58:12.050+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-23T23:58:12.062+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-23T23:58:12.062+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T00:00:14.761+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T00:00:14.775+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T00:00:14.776+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T00:02:39.266+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T00:02:39.279+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T00:02:39.279+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T00:03:01.077+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T00:03:01.090+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T00:03:01.090+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T00:08:36.862+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T00:08:36.878+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T00:08:36.878+0800","message":"init server success","port":"8080:8080"}
+{"level":"warn","time":"2024-01-24T00:08:39.565+0800","message":"save room information failed,ERR wrong number of arguments for 'hset' command"}
+{"level":"warn","time":"2024-01-24T00:09:56.887+0800","message":"save room information failed,ERR wrong number of arguments for 'hset' command"}
+{"level":"info","time":"2024-01-24T00:11:50.627+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T00:11:50.642+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T00:11:50.642+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T00:12:53.219+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-24T00:26:53.627+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T00:26:53.642+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T00:26:53.642+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T00:26:57.803+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-24T00:27:24.777+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-24T00:27:27.281+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-24T00:30:15.391+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T00:30:15.408+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T00:30:15.408+0800","message":"init server success","port":"8080:8080"}
