@@ -6,9 +6,12 @@ import (
 )
 
 type User struct {
-	Username string `form:"username" json:"username"`
-	Password string `form:"password" json:"password"`
-	Nickname string `form:"nickname" json:"nickname"`
+	Username   string `form:"username" json:"username"`
+	Password   string `form:"password" json:"password"`
+	Nickname   string `form:"nickname" json:"nickname"`
+	Email      string `form:"email" json:"email"`
+	ID         int    `form:"uid" json:"uid"`
+	StarAmount int    `form:"starAmount" json:"starAmount"`
 }
 type MyClaims struct {
 	Username string `form:"username" json:"username"`

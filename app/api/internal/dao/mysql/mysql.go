@@ -5,9 +5,22 @@ import (
 	"gobang/app/api/internal/model"
 )
 
+/*
+CREATE TABLE `gobangUsers` (
+	`id` BIGINT(20) NOT NULL AUTO_INCREMENT,
+	`username` VARCHAR(30) DEFAULT 'unnamed',
+	`password` VARCHAR(30) DEFAULT 'unset',
+	`nickname` VARCHAR(30) DEFAULT 'player',
+	`email` VARCHAR(40) DEFAULT 'null',
+	`star` BIGINT(20) DEFAULT '0',
+	PRIMARY KEY(`id`)
+)ENGINE=InnoDB AUTO_INCREMENT=1 CHARSET=utf8mb4;
+`avatar` LONGBLOB,
+*/
+
 func CheckUser(username1 string) (bool, error) {
 	var userExists bool
-	query := "SELECT EXISTS(SELECT 1 FROM users WHERE username = ?) AS user_exists"
+	query := "SELECT EXISTS(SELECT 1 FROM gobangUsers WHERE username = ?) AS user_exists"
 	err := global.MysqlDB.Get(&userExists, query, username1)
 	if err != nil {
 		global.Logger.Warn("mysql CheckUser failed" + err.Error())
@@ -15,7 +28,7 @@ func CheckUser(username1 string) (bool, error) {
 	return userExists, err
 }
 func AddNewUser(username string, password string, nickname string) (error, int) {
-	sqlStr := "insert into users(username,password,nickname) values (?,?,?)"
+	sqlStr := "insert into gobangUsers(username,password,nickname) values (?,?,?)"
 	ret, err := global.MysqlDB.Exec(sqlStr, username, password, nickname)
 	if err != nil {
 		return err, -1
@@ -27,7 +40,7 @@ func AddNewUser(username string, password string, nickname string) (error, int) 
 	return err, int(newID)
 }
 func CheckPassword(username string, password string) (bool, error) {
-	sqlstr := "SELECT * FROM users where username = ?"
+	sqlstr := "SELECT * FROM gobangUsers where username = ?"
 	var user1 model.User
 	err := global.MysqlDB.Get(&user1, sqlstr, username)
 	if err != nil {
@@ -37,4 +50,13 @@ func CheckPassword(username string, password string) (bool, error) {
 		return true, err
 	}
 	return false, err
+}
+func GetUserInformation(username string) (model.User, error) {
+	sqlstr := "SELECT * FROM gobangUsers where username = ?"
+	var user1 model.User
+	err := global.MysqlDB.Get(&user1, sqlstr, username)
+	if err != nil {
+		return user1, err
+	}
+	return user1, nil
 }

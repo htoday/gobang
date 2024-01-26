@@ -15,7 +15,7 @@ func UseJWT(username string) string {
 		Username: username,
 		StandardClaims: jwt.StandardClaims{
 			NotBefore: time.Now().Unix() - 60,
-			ExpiresAt: time.Now().Unix() + 60*60*2,
+			ExpiresAt: time.Now().Unix() + 60*60*6,
 			Issuer:    "htoday",
 		},
 	}
@@ -35,9 +35,12 @@ func CheckToken() gin.HandlerFunc {
 			return MySigningKey, nil
 		})
 		if err != nil {
-			global.Logger.Info(token.Claims.(*model.MyClaims).Username + "'s token correct")
-			c.Next()
+			global.Logger.Warn(token.Claims.(*model.MyClaims).Username + "'s token wrong or expired" + err.Error())
+			c.JSON(401, gin.H{
+				"msg": "token wrong or expired",
+			})
 		}
-		global.Logger.Warn(token.Claims.(*model.MyClaims).Username + "'s token wrong or expired" + err.Error())
+		global.Logger.Info(token.Claims.(*model.MyClaims).Username + "'s token correct")
+		c.Next()
 	}
 }

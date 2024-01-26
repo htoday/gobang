@@ -59,3 +59,83 @@
 {"level":"info","time":"2024-01-24T00:30:15.391+0800","message":"init mysql success"}
 {"level":"info","time":"2024-01-24T00:30:15.408+0800","message":"init redis success"}
 {"level":"info","time":"2024-01-24T00:30:15.408+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T16:09:07.399+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T16:09:07.435+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T16:09:07.435+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T16:11:13.689+0800","message":"registersuccess"}
+{"level":"warn","time":"2024-01-24T16:13:21.601+0800","message":"get information failed,sql: Scan error on column index 5, name \"avatar\": converting NULL to string is unsupported"}
+{"level":"info","time":"2024-01-24T16:13:21.602+0800","message":"get information success,sql: Scan error on column index 5, name \"avatar\": converting NULL to string is unsupported"}
+{"level":"info","time":"2024-01-24T16:35:27.913+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T16:35:27.928+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T16:35:27.928+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T16:35:37.998+0800","message":"username  existed in redis"}
+{"level":"info","time":"2024-01-24T16:38:33.679+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T16:38:33.694+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T16:38:33.694+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T16:39:00.830+0800","message":"username  existed in redis"}
+{"level":"info","time":"2024-01-24T16:39:53.841+0800","message":"registeradminsuccess"}
+{"level":"warn","time":"2024-01-24T16:40:12.820+0800","message":"get information failed,sql: Scan error on column index 5, name \"avatar\": converting NULL to string is unsupported"}
+{"level":"info","time":"2024-01-24T16:40:12.821+0800","message":"get information success,sql: Scan error on column index 5, name \"avatar\": converting NULL to string is unsupported"}
+{"level":"info","time":"2024-01-24T16:43:52.808+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T16:43:52.826+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T16:43:52.826+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T16:44:20.417+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T16:44:20.436+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T16:44:20.436+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T16:44:36.543+0800","message":"username admin existed in redis"}
+{"level":"info","time":"2024-01-24T16:45:58.856+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T16:45:58.870+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T16:45:58.870+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T16:46:43.639+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T16:46:43.654+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T16:46:43.654+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T17:00:50.142+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T17:00:50.159+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T17:00:50.159+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-24T17:00:58.275+0800","message":"registeradminsuccess"}
+{"level":"info","time":"2024-01-24T17:03:40.475+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T17:03:40.497+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T17:03:40.497+0800","message":"init server success","port":"8080:8080"}
+{"level":"warn","time":"2024-01-24T17:03:43.482+0800","message":"get information failed,sql: Scan error on column index 5, name \"avatar\": converting NULL to string is unsupported"}
+{"level":"info","time":"2024-01-24T17:03:43.482+0800","message":"get information success,sql: Scan error on column index 5, name \"avatar\": converting NULL to string is unsupported"}
+{"level":"info","time":"2024-01-24T17:16:42.832+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-24T17:16:42.850+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-24T17:16:42.850+0800","message":"init server success","port":"8080:8080"}
+{"level":"warn","time":"2024-01-24T17:18:00.550+0800","message":"get roomID failed,EOF"}
+{"level":"info","time":"2024-01-24T17:18:49.356+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-26T14:42:30.700+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T14:42:30.716+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T14:42:30.716+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T14:43:36.259+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T14:43:36.275+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T14:43:36.275+0800","message":"init server success","port":"8080:8080"}
+{"level":"warn","time":"2024-01-26T14:43:39.555+0800","message":"get information failed,missing destination name avatar in *model.User"}
+{"level":"info","time":"2024-01-26T14:43:39.555+0800","message":"get information success,missing destination name avatar in *model.User"}
+{"level":"info","time":"2024-01-26T14:54:36.246+0800","message":"username admin existed in redis"}
+{"level":"info","time":"2024-01-26T14:55:00.079+0800","message":"registeradminsuccess"}
+{"level":"info","time":"2024-01-26T14:56:13.918+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T14:56:13.936+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T14:56:13.936+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T14:56:33.344+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T14:56:33.360+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T14:56:33.360+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T14:57:30.490+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T14:57:30.506+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T14:57:30.507+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T14:58:15.513+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T14:58:15.527+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T14:58:15.527+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T14:58:17.495+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T15:04:57.363+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T15:04:57.379+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T15:04:57.379+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T15:05:40.101+0800","message":"username admin existed in redis"}
+{"level":"info","time":"2024-01-26T15:06:49.964+0800","message":"registerababsuccess"}
+{"level":"info","time":"2024-01-26T15:07:00.017+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T15:07:05.365+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T15:13:10.080+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T15:13:10.098+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T15:13:10.098+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T15:13:13.484+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T15:13:13.489+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T15:13:13.502+0800","message":"get information success,"}
