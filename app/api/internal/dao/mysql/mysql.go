@@ -12,7 +12,7 @@ CREATE TABLE `gobangUsers` (
 	`password` VARCHAR(30) DEFAULT 'unset',
 	`nickname` VARCHAR(30) DEFAULT 'player',
 	`email` VARCHAR(40) DEFAULT 'null',
-	`star` BIGINT(20) DEFAULT '0',
+	`starAmount` BIGINT(20) DEFAULT '0',
 	PRIMARY KEY(`id`)
 )ENGINE=InnoDB AUTO_INCREMENT=1 CHARSET=utf8mb4;
 `avatar` LONGBLOB,

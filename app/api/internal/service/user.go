@@ -110,6 +110,7 @@ func Login(c *gin.Context) {
 	//先在redis里面找
 	flag, err = redis.CheckPassword(u.Username, u.Password)
 	if err != nil { //如果有其他错误
+		global.Logger.Warn("username" + u.Username + "redis select failed" + err.Error())
 		c.JSON(400, gin.H{
 			//"code": consts.CheckUserFailed,
 			"msg": "redis select failed," + err.Error(),
@@ -126,6 +127,7 @@ func Login(c *gin.Context) {
 	//没找到就在mysql里面找
 	flag, err = mysql.CheckPassword(u.Username, u.Password)
 	if err != nil { //如果有其他错误
+		global.Logger.Warn("username" + u.Username + " mysql select failed " + err.Error())
 		c.JSON(400, gin.H{
 			//"code": consts.CheckUserFailed,
 			"msg": "mysql select failed," + err.Error(),

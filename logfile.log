@@ -139,3 +139,114 @@
 {"level":"info","time":"2024-01-26T15:13:13.484+0800","message":"username abab existed in redis"}
 {"level":"info","time":"2024-01-26T15:13:13.489+0800","message":"abab login success"}
 {"level":"info","time":"2024-01-26T15:13:13.502+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T16:21:15.261+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:21:15.284+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:21:15.285+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:21:27.584+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T16:21:29.881+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T16:21:39.309+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T16:28:56.881+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:28:56.896+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:28:56.896+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:29:19.740+0800","message":"username abab existed in redis"}
+{"level":"warn","time":"2024-01-26T16:29:19.750+0800","message":"usernameababmysql select failedmissing destination name star in *model.User"}
+{"level":"info","time":"2024-01-26T16:32:14.862+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:32:14.877+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:32:14.877+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:32:19.477+0800","message":"username abab existed in redis"}
+{"level":"warn","time":"2024-01-26T16:32:19.482+0800","message":"usernameababmysql select failedmissing destination name starAmount in *model.User"}
+{"level":"info","time":"2024-01-26T16:36:07.340+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:36:07.356+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:36:07.356+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:36:51.108+0800","message":"username abab existed in redis"}
+{"level":"warn","time":"2024-01-26T16:36:51.113+0800","message":"usernameabab mysql select failed missing destination name starAmount in *model.User"}
+{"level":"info","time":"2024-01-26T16:39:03.683+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:39:03.702+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:39:03.702+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:39:07.432+0800","message":"username abab existed in redis"}
+{"level":"warn","time":"2024-01-26T16:39:07.440+0800","message":"usernameabab mysql select failed missing destination name starAmount in *model.User"}
+{"level":"info","time":"2024-01-26T16:41:20.366+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:41:20.380+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:41:20.381+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:41:22.291+0800","message":"username abab existed in redis"}
+{"level":"warn","time":"2024-01-26T16:41:22.294+0800","message":"usernameabab mysql select failed missing destination name starAmount in *model.User"}
+{"level":"info","time":"2024-01-26T16:44:40.764+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:44:40.782+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:44:40.782+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:44:46.175+0800","message":"username abab existed in redis"}
+{"level":"warn","time":"2024-01-26T16:44:46.178+0800","message":"usernameabab mysql select failed missing destination name starAmount in *model.User"}
+{"level":"info","time":"2024-01-26T16:44:57.071+0800","message":"username abab existed in redis"}
+{"level":"warn","time":"2024-01-26T16:44:57.074+0800","message":"usernameabab mysql select failed missing destination name starAmount in *model.User"}
+{"level":"info","time":"2024-01-26T16:46:55.386+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:46:55.403+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:46:55.403+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:47:06.614+0800","message":"username abab existed in redis"}
+{"level":"warn","time":"2024-01-26T16:47:06.618+0800","message":"usernameabab mysql select failed missing destination name starAmount in *model.User"}
+{"level":"info","time":"2024-01-26T16:50:09.998+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:50:10.015+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:50:10.015+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:50:17.276+0800","message":"username abab existed in redis"}
+{"level":"warn","time":"2024-01-26T16:50:17.278+0800","message":"usernameabab mysql select failed missing destination name starAmount in *model.User"}
+{"level":"info","time":"2024-01-26T16:53:10.869+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:53:10.883+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:53:10.883+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:53:15.938+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T16:53:15.942+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T16:53:15.949+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T16:53:43.850+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:53:43.864+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:53:43.864+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:54:05.195+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T16:54:05.199+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T16:54:05.205+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T16:57:31.756+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T16:57:31.775+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T16:57:31.775+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T16:57:39.618+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T16:57:39.623+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T16:57:39.631+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T17:06:37.671+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T17:06:37.690+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T17:06:37.690+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T17:06:41.925+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T17:06:41.931+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T17:06:41.943+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T17:07:24.342+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T17:07:24.347+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T17:07:24.357+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T17:09:01.187+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T17:09:01.202+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T17:09:01.202+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T17:09:09.858+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T17:09:09.865+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T17:09:09.874+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T17:13:42.888+0800","message":"edit information success"}
+{"level":"info","time":"2024-01-26T17:14:21.521+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T17:14:21.524+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T17:14:21.535+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T17:14:33.022+0800","message":"edit information success"}
+{"level":"info","time":"2024-01-26T17:14:48.660+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T17:14:48.665+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T17:14:48.673+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T17:19:37.368+0800","message":"edit information success"}
+{"level":"info","time":"2024-01-26T17:20:18.954+0800","message":"edit information success"}
+{"level":"info","time":"2024-01-26T17:23:15.940+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T17:23:15.956+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T17:23:15.957+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T17:23:21.761+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T17:23:21.767+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T17:23:21.782+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T17:25:54.670+0800","message":"edit information success"}
+{"level":"info","time":"2024-01-26T17:33:19.087+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T17:33:19.104+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T17:33:19.104+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T17:33:35.571+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T17:33:35.577+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T17:33:35.586+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T17:37:46.288+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-26T17:37:46.301+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-26T17:37:46.301+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-26T17:37:58.120+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-26T17:37:58.126+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-26T17:37:58.140+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-26T17:38:05.499+0800","message":"edit information success"}

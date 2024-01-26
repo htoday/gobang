@@ -6,12 +6,12 @@ import (
 )
 
 type User struct {
-	Username   string `form:"username" json:"username"`
-	Password   string `form:"password" json:"password"`
-	Nickname   string `form:"nickname" json:"nickname"`
-	Email      string `form:"email" json:"email"`
-	ID         int    `form:"uid" json:"uid"`
-	StarAmount int    `form:"starAmount" json:"starAmount"`
+	Username   string `form:"username" json:"username" db:"username"`
+	Password   string `form:"password" json:"password" db:"password"`
+	Nickname   string `form:"nickname" json:"nickname" db:"nickname"`
+	Email      string `form:"email" json:"email" db:"email"`
+	ID         int    `form:"uid" json:"uid" db:"id"`
+	StarAmount int    `form:"starAmount" json:"starAmount" db:"starAmount"`
 }
 type MyClaims struct {
 	Username string `form:"username" json:"username"`

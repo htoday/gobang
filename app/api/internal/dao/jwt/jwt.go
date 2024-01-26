@@ -44,3 +44,8 @@ func CheckToken() gin.HandlerFunc {
 		c.Next()
 	}
 }
+func Test(c *gin.Context) {
+	c.JSON(200, gin.H{
+		"msg": "test",
+	})
+}
