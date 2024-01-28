@@ -60,3 +60,9 @@ func GetUserInformation(username string) (model.User, error) {
 	}
 	return user1, nil
 }
+func GetNickname(username string) (string, error) {
+	sqlstr := "SELECT nickname FROM gobangUsers where username = ?"
+	var nickname string
+	err := global.MysqlDB.Get(&nickname, sqlstr, username)
+	return nickname, err
+}

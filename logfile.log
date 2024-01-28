@@ -250,3 +250,161 @@
 {"level":"info","time":"2024-01-26T17:37:58.126+0800","message":"abab login success"}
 {"level":"info","time":"2024-01-26T17:37:58.140+0800","message":"get information success,"}
 {"level":"info","time":"2024-01-26T17:38:05.499+0800","message":"edit information success"}
+{"level":"info","time":"2024-01-28T15:24:57.413+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T15:24:57.427+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T15:24:57.427+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T15:25:33.317+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T15:25:33.333+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T15:25:33.333+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T15:25:38.110+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T15:25:38.125+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T15:25:38.134+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T16:08:29.903+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T16:08:29.931+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T16:08:29.931+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T16:08:42.645+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T16:08:42.692+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T16:08:42.701+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T16:08:43.857+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:09:26.793+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-28T16:09:34.015+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-28T16:11:06.831+0800","message":"username admin existed in redis"}
+{"level":"info","time":"2024-01-28T16:11:06.838+0800","message":"admin login success"}
+{"level":"info","time":"2024-01-28T16:11:06.849+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T16:11:08.265+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:11:13.078+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:11:51.385+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-28T16:13:19.004+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:13:19.885+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:13:20.684+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:15:14.196+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:22:58.851+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T16:22:58.868+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T16:22:58.868+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T16:23:17.305+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T16:23:17.311+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T16:23:17.322+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T16:23:18.352+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:23:38.849+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:23:39.845+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:23:55.372+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:23:55.919+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:23:59.135+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:23:59.341+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:24:21.009+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-28T16:24:24.309+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:24:26.980+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:24:37.268+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:26:54.487+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:35:31.801+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T16:35:31.817+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T16:35:31.818+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T16:36:03.933+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T16:36:03.939+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T16:36:03.951+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T16:36:05.540+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:36:12.096+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:36:13.937+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:36:26.831+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-28T16:36:28.021+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:36:45.398+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:36:47.719+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:36:52.906+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:37:13.415+0800","message":"username admin existed in redis"}
+{"level":"info","time":"2024-01-28T16:37:13.425+0800","message":"admin login success"}
+{"level":"info","time":"2024-01-28T16:37:13.434+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T16:37:14.743+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:37:36.376+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:37:37.637+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:37:49.117+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T16:41:20.925+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T16:41:20.944+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T16:41:20.944+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T16:41:23.835+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T16:41:23.841+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T16:41:23.853+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T16:41:25.116+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:23:24.781+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T17:23:24.799+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T17:23:24.799+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T17:23:38.635+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T17:23:38.665+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T17:23:38.678+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:23:39.774+0800","message":"get room information success"}
+{"level":"warn","time":"2024-01-28T17:23:50.849+0800","message":"get roomID failed,json: cannot unmarshal number into Go struct field Message.roomID of type string"}
+{"level":"info","time":"2024-01-28T17:29:09.788+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T17:29:09.803+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T17:29:09.803+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T17:29:18.179+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T17:29:18.184+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T17:29:18.207+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:29:19.421+0800","message":"get room information success"}
+{"level":"warn","time":"2024-01-28T17:29:27.340+0800","message":"password wrong"}
+{"level":"warn","time":"2024-01-28T17:31:31.584+0800","message":"password wrong"}
+{"level":"info","time":"2024-01-28T17:33:52.630+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T17:33:52.649+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T17:33:52.650+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T17:33:57.913+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T17:33:57.932+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T17:33:57.945+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:33:58.818+0800","message":"get room information success"}
+{"level":"warn","time":"2024-01-28T17:34:05.505+0800","message":"abab have entered room"}
+{"level":"info","time":"2024-01-28T17:34:20.238+0800","message":"username admin existed in redis"}
+{"level":"info","time":"2024-01-28T17:34:20.245+0800","message":"admin login success"}
+{"level":"info","time":"2024-01-28T17:34:20.253+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:34:21.050+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:34:37.327+0800","message":"save room information success"}
+{"level":"info","time":"2024-01-28T17:34:52.606+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:35:02.516+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:35:22.099+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:35:27.209+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:38:19.375+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T17:38:19.408+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T17:38:19.408+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T17:38:28.978+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T17:38:28.984+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T17:38:28.996+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:38:30.105+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:38:32.973+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:38:37.125+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:38:38.024+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:39:05.420+0800","message":"get room information success"}
+{"level":"warn","time":"2024-01-28T17:39:16.271+0800","message":"get nickname failed"}
+{"level":"info","time":"2024-01-28T17:39:45.927+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T17:39:45.933+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T17:39:45.947+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:39:47.060+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:39:59.453+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-28T17:40:00.414+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:40:19.457+0800","message":"username admin existed in redis"}
+{"level":"info","time":"2024-01-28T17:40:19.462+0800","message":"admin login success"}
+{"level":"info","time":"2024-01-28T17:40:19.470+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:40:21.039+0800","message":"get room information success"}
+{"level":"warn","time":"2024-01-28T17:40:26.489+0800","message":"password wrong"}
+{"level":"info","time":"2024-01-28T17:44:19.369+0800","message":"init mysql success"}
+{"level":"info","time":"2024-01-28T17:44:19.389+0800","message":"init redis success"}
+{"level":"info","time":"2024-01-28T17:44:19.389+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-01-28T17:44:28.768+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T17:44:28.793+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T17:44:28.802+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:44:29.915+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:44:34.761+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-01-28T17:44:34.765+0800","message":"abab login success"}
+{"level":"info","time":"2024-01-28T17:44:34.773+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:44:35.943+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:45:21.954+0800","message":"username admin existed in redis"}
+{"level":"info","time":"2024-01-28T17:45:21.959+0800","message":"admin login success"}
+{"level":"info","time":"2024-01-28T17:45:21.970+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:45:23.056+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:45:46.956+0800","message":"save room information success,"}
+{"level":"info","time":"2024-01-28T17:45:48.276+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:45:52.373+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:46:10.909+0800","message":"save room information success"}
+{"level":"info","time":"2024-01-28T17:46:16.936+0800","message":"adminleave 1 success"}
+{"level":"info","time":"2024-01-28T17:46:17.018+0800","message":"get room information success"}
+{"level":"info","time":"2024-01-28T17:46:24.218+0800","message":"save room information success"}
+{"level":"info","time":"2024-01-28T17:47:18.351+0800","message":"registeracacsuccess"}
+{"level":"info","time":"2024-01-28T17:47:24.743+0800","message":"username acac existed in redis"}
+{"level":"info","time":"2024-01-28T17:47:24.751+0800","message":"acac login success"}
+{"level":"info","time":"2024-01-28T17:47:24.760+0800","message":"get information success,"}
+{"level":"info","time":"2024-01-28T17:47:25.755+0800","message":"get room information success"}

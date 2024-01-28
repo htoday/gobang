@@ -18,12 +18,15 @@ type MyClaims struct {
 	jwt.StandardClaims
 }
 type Message struct {
-	Code      int    `form:"code" json:"code"`
-	Username1 string `form:"username1" json:"username1"`
-	Username2 string `form:"username2" json:"username2"`
-	RoomID    string `form:"roomID" json:"roomID"`
-	Row       int    `form:"row" json:"row"`
-	Col       int    `form:"col" json:"col"`
+	Code         int    `form:"code" json:"code"`
+	Username     string `form:"username" json:"username"`
+	RoomID       int    `form:"roomID" json:"roomID"`
+	Row          int    `form:"row" json:"row"`
+	Col          int    `form:"col" json:"col"`
+	RoomPassword string `form:"RoomPassword" json:"RoomPassword"`
+	Ranking      bool   `form:"ranking" json:"ranking"`
+	Forbidden    bool   `form:"forbidden" json:"forbidden"`
+	Title        string `form:"title" json:"title"`
 }
 type Counter struct {
 	Mu    sync.Mutex
