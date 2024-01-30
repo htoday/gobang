@@ -23,8 +23,25 @@ type Room struct {
 	RoomStatus    int    `json:"roomStatus"`
 	UserNickname1 string `json:"userNickname1"`
 	UserNickname2 string `json:"userNickname2"`
+	FirstAct      int    `json:"firstAct"` //1为玩家1先手，2为玩家2先手，3为随机
 }
 
+func GetRoom(roomID int) (Room, error) {
+	var thisRoom Room
+	ctx := context.Background()
+	roomJSON, err := global.RDB.HGet(ctx, "rooms", strconv.Itoa(roomID)).Result()
+	if err != nil {
+		global.Logger.Warn("translate JSON into room failed," + err.Error())
+		return Room{}, err
+	}
+	//反序列化
+	err = json.Unmarshal([]byte(roomJSON), &thisRoom)
+	if err != nil {
+		global.Logger.Warn("Unmarshal JSON failed," + err.Error())
+		return thisRoom, err
+	}
+	return thisRoom, nil
+}
 func UpdateRoom(r Room, roomID int) error {
 	ctx := context.Background()
 	roomJSON, err := json.Marshal(r)
@@ -108,6 +125,7 @@ func CreatRoom(c *gin.Context) {
 		User1Ready:    false,
 		User2Ready:    false,
 		Title:         m.Title,
+		FirstAct:      1,
 	}
 	err = UpdateRoom(r, r.RoomID)
 	if err != nil {
@@ -512,6 +530,14 @@ func GetRoomInformation(c *gin.Context) {
 		})
 		return
 	}
+	thisGame, err := GetGame(thisRoom.RoomID)
+	if err != nil {
+		c.JSON(400, gin.H{
+			"msg": "get game JSON failed," + err.Error(),
+		})
+		return
+	}
+
 	c.JSON(200, gin.H{
 		"roomID":        thisRoom.RoomID,
 		"username1":     thisRoom.User1,
@@ -524,6 +550,8 @@ func GetRoomInformation(c *gin.Context) {
 		"ranking":       thisRoom.Ranking,
 		"user1Ready":    thisRoom.User1Ready,
 		"user2Ready":    thisRoom.User2Ready,
+		"firstAct":      thisRoom.FirstAct,
+		"checkBoard":    thisGame.CheckBoard,
 		"msg":           "get room information success",
 	})
 }

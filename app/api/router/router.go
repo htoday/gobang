@@ -21,6 +21,8 @@ func InitRouter(port string) error {
 	r.POST("/createRoomPackage", service.CreatRoom)
 	r.POST("/enterRoomPackage", service.EnterRoom)
 	r.POST("/leaveRoomPackage", service.LeaveRoom)
+	r.POST("/putChess", service.PutChess)
+	r.POST("/startGame", service.StartGame)
 	//v1 := r.Group("").Use() //jwt.CheckToken()
 	//v1.POST("/gameHall/creatRoom", service.CreatRoom)
 
