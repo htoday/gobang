@@ -8,6 +8,7 @@ import (
 	"gobang/app/api/internal/dao/mysql"
 	"gobang/app/api/internal/model"
 	"strconv"
+	"time"
 )
 
 type Room struct {
@@ -55,6 +56,15 @@ func UpdateRoom(r Room, roomID int) error {
 	return nil
 }
 func GetRoomList(c *gin.Context) {
+	var m model.Message
+	err := c.ShouldBindJSON(&m)
+	if err != nil {
+		global.Logger.Warn("get request failed," + err.Error())
+		c.JSON(400, gin.H{
+			"msg": "get request failed," + err.Error(),
+		})
+		return
+	}
 	ctx := context.Background()
 	roomsMap, err := global.RDB.HGetAll(ctx, "rooms").Result()
 	if err != nil {
@@ -65,6 +75,7 @@ func GetRoomList(c *gin.Context) {
 		return
 	}
 	var rooms []Room
+	joinedRoomID := 0
 	for _, roomJSON := range roomsMap {
 		var thisRoom Room
 		err := json.Unmarshal([]byte(roomJSON), &thisRoom)
@@ -73,11 +84,15 @@ func GetRoomList(c *gin.Context) {
 			//这里不return了
 		}
 		thisRoom.RoomPassword = "unknown"
+		if thisRoom.User1 == m.Username || thisRoom.User2 == m.Username {
+			joinedRoomID = thisRoom.RoomID
+		}
 		rooms = append(rooms, thisRoom)
 	}
 	global.Logger.Info("get room information success")
 	c.JSON(200, gin.H{
-		"room": rooms,
+		"joinedRoomID": joinedRoomID,
+		"room":         rooms,
 	})
 	//这里后面需要讨论
 }
@@ -137,7 +152,7 @@ func CreatRoom(c *gin.Context) {
 	}
 	global.Logger.Info("save room information success,")
 	c.JSON(200, gin.H{
-		"roomID": strconv.Itoa(r.RoomID),
+		"roomID": r.RoomID,
 		"msg":    "save room information success,",
 	})
 }
@@ -205,6 +220,14 @@ func EnterRoom(c *gin.Context) {
 	}
 	if thisRoom.User1 != "" && thisRoom.User2 == "" {
 		thisRoom.User2 = m.Username
+		thisRoom.UserNickname2, err = mysql.GetNickname(thisRoom.User2)
+		if err != nil {
+			global.Logger.Warn("get nickname failed" + err.Error())
+			c.JSON(400, gin.H{
+				"msg": "get nickname failed" + err.Error(),
+			})
+			return
+		}
 		err = UpdateRoom(thisRoom, thisRoom.RoomID)
 		if err != nil {
 			global.Logger.Warn("save room information failed," + err.Error())
@@ -274,10 +297,12 @@ func LeaveRoom(c *gin.Context) {
 	}
 	if thisRoom.User1 == m.Username {
 		thisRoom.User1 = ""
+		thisRoom.UserNickname1 = ""
 		err = UpdateRoom(thisRoom, thisRoom.RoomID)
 	}
 	if thisRoom.User2 == m.Username {
 		thisRoom.User2 = ""
+		thisRoom.UserNickname2 = ""
 		err = UpdateRoom(thisRoom, thisRoom.RoomID)
 	}
 	//房主为空就删房间
@@ -354,23 +379,13 @@ func RoomReady(c *gin.Context) {
 				})
 				return
 			}
-		}
-		if thisRoom.User2Ready == true {
-			thisRoom.User2Ready = false
-			err = UpdateRoom(thisRoom, thisRoom.RoomID)
-			if err != nil {
-				global.Logger.Warn("Update Room Ready failed," + err.Error())
-				c.JSON(400, gin.H{
-					"msg": "Update Room Ready failed," + err.Error(),
-				})
-				return
-			}
+			global.Logger.Info(m.Username + "ready success")
+			c.JSON(200, gin.H{
+				"msg": m.Username + "ready success",
+			})
 			return
-		}
-	}
-	if thisRoom.User2 == m.Username {
-		if thisRoom.User2Ready == false {
-			thisRoom.User2Ready = true
+		} else {
+			thisRoom.User2Ready = false
 			err = UpdateRoom(thisRoom, thisRoom.RoomID)
 			if err != nil {
 				global.Logger.Warn("Update Room Ready failed," + err.Error())
@@ -385,23 +400,9 @@ func RoomReady(c *gin.Context) {
 			})
 			return
 		}
-		if thisRoom.User2Ready == true {
-			thisRoom.User2Ready = false
-			err = UpdateRoom(thisRoom, thisRoom.RoomID)
-			if err != nil {
-				global.Logger.Warn("Update Room Ready failed," + err.Error())
-				c.JSON(400, gin.H{
-					"msg": "Update Room Ready failed," + err.Error(),
-				})
-				return
-			}
-			global.Logger.Info(m.Username + " cansel ready success")
-			c.JSON(200, gin.H{
-				"msg": m.Username + " cansel ready success",
-			})
-			return
-		}
+
 	}
+
 	if thisRoom.User1 == m.Username {
 		if thisRoom.User1Ready == false {
 			thisRoom.User1Ready = true
@@ -500,6 +501,44 @@ func ChangeForbidden(c *gin.Context) {
 		"msg": "forbidden changed in room " + strconv.Itoa(thisRoom.RoomID),
 	})
 }
+func SetFirstAct(c *gin.Context) {
+	var m model.Message
+	err := c.ShouldBindJSON(&m)
+	if err != nil {
+		global.Logger.Warn("get roomID failed," + err.Error())
+		c.JSON(404, gin.H{
+			"msg": "get roomID failed," + err.Error(),
+		})
+		return
+	}
+	thisRoom, err := GetRoom(m.RoomID)
+	if err != nil {
+		c.JSON(400, gin.H{
+			"msg": "get room JSON failed," + err.Error(),
+		})
+		return
+	}
+	if thisRoom.FirstAct == 1 {
+		thisRoom.FirstAct = 2
+	} else if thisRoom.FirstAct == 2 {
+		thisRoom.FirstAct = 3
+	} else if thisRoom.FirstAct == 3 {
+		thisRoom.FirstAct = 1
+	}
+	err = UpdateRoom(thisRoom, thisRoom.RoomID)
+	if err != nil {
+		global.Logger.Warn("Update Room Ready failed," + err.Error())
+		c.JSON(400, gin.H{
+			"msg": "Update Room Ready failed," + err.Error(),
+		})
+		return
+	}
+	global.Logger.Info("Set FirstAct success")
+	c.JSON(200, gin.H{
+		"msg": "Set FirstAct success",
+	})
+	return
+}
 func GetRoomInformation(c *gin.Context) {
 	var m model.Message
 	ctx := context.Background()
@@ -530,6 +569,25 @@ func GetRoomInformation(c *gin.Context) {
 		})
 		return
 	}
+	if thisRoom.RoomStatus == 0 {
+		c.JSON(200, gin.H{
+			"roomID":       thisRoom.RoomID,
+			"username1":    thisRoom.User1,
+			"nickname1":    thisRoom.UserNickname1,
+			"username2":    thisRoom.User2,
+			"nickname2":    thisRoom.UserNickname2,
+			"forbidden":    thisRoom.Forbidden,
+			"roomStatus":   thisRoom.RoomStatus,
+			"roomPassword": thisRoom.RoomPassword,
+			"ranking":      thisRoom.Ranking,
+			"user1Ready":   thisRoom.User1Ready,
+			"user2Ready":   thisRoom.User2Ready,
+			"firstAct":     thisRoom.FirstAct,
+			"title":        thisRoom.Title,
+			"msg":          "get room information success",
+		})
+		return
+	}
 	thisGame, err := GetGame(thisRoom.RoomID)
 	if err != nil {
 		c.JSON(400, gin.H{
@@ -537,25 +595,38 @@ func GetRoomInformation(c *gin.Context) {
 		})
 		return
 	}
-
 	c.JSON(200, gin.H{
-		"roomID":        thisRoom.RoomID,
-		"username1":     thisRoom.User1,
-		"userNickname1": thisRoom.UserNickname1,
-		"username2":     thisRoom.User2,
-		"userNickname2": thisRoom.UserNickname2,
-		"forbidden":     thisRoom.Forbidden,
-		"roomStatus":    thisRoom.RoomStatus,
-		"roomPassword":  thisRoom.RoomPassword,
-		"ranking":       thisRoom.Ranking,
-		"user1Ready":    thisRoom.User1Ready,
-		"user2Ready":    thisRoom.User2Ready,
-		"firstAct":      thisRoom.FirstAct,
-		"checkBoard":    thisGame.CheckBoard,
-		"msg":           "get room information success",
+		"roomID":       thisRoom.RoomID,
+		"username1":    thisRoom.User1,
+		"nickname1":    thisRoom.UserNickname1,
+		"username2":    thisRoom.User2,
+		"nickname2":    thisRoom.UserNickname2,
+		"forbidden":    thisRoom.Forbidden,
+		"roomStatus":   thisRoom.RoomStatus,
+		"roomPassword": thisRoom.RoomPassword,
+		"ranking":      thisRoom.Ranking,
+		"user1Ready":   thisRoom.User1Ready,
+		"user2Ready":   thisRoom.User2Ready,
+		"firstAct":     thisRoom.FirstAct,
+		"gameBoard":    thisGame.CheckBoard,
+		"turn":         thisGame.Turn,
+		"msg":          "get room information success",
 	})
 }
-
+func ResetRoom(roomID int) {
+	time.Sleep(time.Second * 6)
+	thisRoom, err := GetRoom(roomID)
+	if err != nil {
+		global.Logger.Error("get room failed" + err.Error())
+	}
+	thisRoom.RoomStatus = 0
+	thisGame, err := GetGame(roomID)
+	if err != nil {
+		global.Logger.Error("get game failed" + err.Error())
+	}
+	err = UpdateRoom(thisRoom, thisRoom.RoomID)
+	err = UpdateGame(thisGame, thisGame.RoomID)
+}
 func RoomChat() {
 
 }

@@ -27,6 +27,7 @@ type Message struct {
 	Ranking      bool   `form:"ranking" json:"ranking"`
 	Forbidden    bool   `form:"forbidden" json:"forbidden"`
 	Title        string `form:"title" json:"title"`
+	FirstAct     int    `form:"firstAct" json:"firstAct"`
 }
 type Counter struct {
 	Mu    sync.Mutex

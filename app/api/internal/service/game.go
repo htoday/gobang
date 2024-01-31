@@ -13,7 +13,7 @@ import (
 
 type Game struct {
 	RoomID     int     `json:"roomID"`
-	CheckBoard [][]int `json:"checkBoard"`
+	CheckBoard [][]int `json:"gameBoard"`
 	Turn       int     `json:"turn"`
 	FirstAct   int     `json:"firstAct"`
 }
@@ -91,7 +91,7 @@ func PutChess(c *gin.Context) {
 				flag := JudgeBan(thisGame.CheckBoard, m.Row, m.Col)
 				if flag == true {
 					c.JSON(400, gin.H{
-						"msg": "Forbidden point" + err.Error(),
+						"msg": "Forbidden point",
 					})
 					return
 				}
@@ -107,6 +107,7 @@ func PutChess(c *gin.Context) {
 					})
 					return
 				}
+				go ResetRoom(thisGame.RoomID)
 			}
 		} else { //轮到玩家二行动
 			thisGame.CheckBoard[m.Row][m.Col] = 2 //2为白子
@@ -120,7 +121,9 @@ func PutChess(c *gin.Context) {
 					})
 					return
 				}
+				go ResetRoom(thisGame.RoomID)
 			}
+
 		}
 	} else { //玩家2执黑
 		if thisGame.Turn == 1 { //轮到玩家一行动
@@ -135,13 +138,15 @@ func PutChess(c *gin.Context) {
 					})
 					return
 				}
+				go ResetRoom(thisGame.RoomID)
 			}
 		} else { //轮到玩家二行动
+
 			if thisRoom.Forbidden == true {
 				flag := JudgeBan(thisGame.CheckBoard, m.Row, m.Col)
 				if flag == true {
 					c.JSON(400, gin.H{
-						"msg": "Forbidden point" + err.Error(),
+						"msg": "Forbidden point",
 					})
 					return
 				}
@@ -157,9 +162,16 @@ func PutChess(c *gin.Context) {
 					})
 					return
 				}
+				go ResetRoom(thisGame.RoomID)
 			}
 		}
 	}
+	if thisGame.Turn == 1 {
+		thisGame.Turn = 2
+	} else {
+		thisGame.Turn = 1
+	}
+
 	err = UpdateGame(thisGame, thisRoom.RoomID)
 	if err != nil {
 		global.Logger.Warn("save game information failed," + err.Error())
@@ -192,11 +204,21 @@ func StartGame(c *gin.Context) {
 		})
 		return
 	}
+	if thisRoom.User1Ready != true || thisRoom.User2Ready != true {
+		global.Logger.Warn("User not ready")
+		c.JSON(400, gin.H{
+			"msg": "User not ready",
+		})
+		return
+	}
 	thisRoom.RoomStatus = 1
 	g := Game{
 		RoomID:     m.RoomID,
 		CheckBoard: make([][]int, 15),
 		Turn:       thisRoom.FirstAct,
+	}
+	for i := 0; i < 15; i++ {
+		g.CheckBoard[i] = make([]int, 15)
 	}
 	if thisRoom.FirstAct == 3 {
 		//设置当前时间为种子
@@ -235,25 +257,31 @@ func StartGame(c *gin.Context) {
 	})
 }
 func JudgeBan(a [][]int, x int, y int) bool {
+	a[x][y] = 1 //1为黑子
 	//先判断胜利，再长连禁手
 	flag := CheckWin(a, 1, x, y)
 	if flag == true {
 		//长连这里被我写成了检查是否存在5连，如果有5连，则不是禁手，反之长连
 		flag = JudgeLongForbidden(a, x, y)
 		if flag == true {
+			a[x][y] = 0
 			return false
 		} else {
+			a[x][y] = 0
 			return true
 		}
 	}
-	flag = JudgeThreeThreeForbidden(a, x, y)
-	if flag == true {
-		return true
-	}
 	flag = JudgeFourFourForbidden(a, x, y)
 	if flag == true {
+		a[x][y] = 0
 		return true
 	}
+	flag = JudgeThreeThreeForbidden(a, x, y)
+	if flag == true {
+		a[x][y] = 0
+		return true
+	}
+	a[x][y] = 0
 	return false
 }
 func JudgeFourFourForbidden(a [][]int, x int, y int) bool {
@@ -385,7 +413,7 @@ func getThreeOneLine(a [][]int, x int, y int, dx int, dy int) int {
 			}
 		}
 		if before == 0 && after == 1 {
-			if beforeBefore == -1 {
+			if afterAfter == -1 {
 				return 0
 			}
 			if JudgeBan(a, x+dx*(3-deltaMiddle), y+dy*(3-deltaMiddle)) {
@@ -408,7 +436,7 @@ func getThreeOneLine(a [][]int, x int, y int, dx int, dy int) int {
 			}
 		}
 		if before == 0 && after == 2 {
-			if beforeBefore == -1 {
+			if afterAfter == -1 {
 				return 0
 			}
 			if JudgeBan(a, x+dx, y+dy) {
@@ -417,6 +445,7 @@ func getThreeOneLine(a [][]int, x int, y int, dx int, dy int) int {
 				return 1
 			}
 		}
+
 	}
 	return 0
 }
@@ -450,8 +479,8 @@ func getFourOneLine(a [][]int, x int, y int, dx int, dy int) int {
 		j -= dy
 	}
 	flag = false
-	i = x - dx
-	j = y - dy
+	i = x + dx
+	j = y + dy
 	for {
 		if !(i >= 0 && i <= 14 && j >= 0 && j <= 14) || a[i][j] == 2 {
 			if !flag {
@@ -502,7 +531,7 @@ func JudgeLongForbidden(a [][]int, x int, y int) bool {
 			break
 		}
 	}
-	for i := x + 1; i <= 14; i-- {
+	for i := x + 1; i <= 14; i++ {
 		if a[i][y] == color {
 			length++
 		} else {
@@ -521,7 +550,7 @@ func JudgeLongForbidden(a [][]int, x int, y int) bool {
 			break
 		}
 	}
-	for i := y + 1; i <= 14; i-- {
+	for i := y + 1; i <= 14; i++ {
 		if a[x][i] == color {
 			length++
 		} else {
@@ -571,7 +600,7 @@ func CheckWin(a [][]int, color int, x int, y int) bool {
 			break
 		}
 	}
-	for i := x + 1; i <= 14; i-- {
+	for i := x + 1; i <= 14; i++ {
 		if a[i][y] == color {
 			length++
 		} else {
@@ -590,7 +619,7 @@ func CheckWin(a [][]int, color int, x int, y int) bool {
 			break
 		}
 	}
-	for i := y + 1; i <= 14; i-- {
+	for i := y + 1; i <= 14; i++ {
 		if a[x][i] == color {
 			length++
 		} else {
