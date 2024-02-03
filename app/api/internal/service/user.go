@@ -118,6 +118,7 @@ func Login(c *gin.Context) {
 		return
 	}
 	if flag == true { //如果redis找到了
+		InitializeUserOnline(u.Username)
 		c.JSON(200, gin.H{
 			//"code": consts.PasswordCorrect,
 			"msg": "Password Correct,",
@@ -147,6 +148,7 @@ func Login(c *gin.Context) {
 			return
 		}
 		global.Logger.Info(u.Username + " login success")
+		InitializeUserOnline(u.Username)
 		return
 	}
 	c.JSON(401, gin.H{

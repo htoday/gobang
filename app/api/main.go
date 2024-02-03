@@ -12,6 +12,7 @@ func main() {
 	initialize.SetupViper()
 	initialize.SetupLogger()
 	initialize.SetupDatabase()
+	go initialize.SetupUpdateRankList()
 	config := global.ConfigName.SeverConfig
 	gin.SetMode(config.Mode)
 	global.Logger.Info("init server success", zap.String("port", config.Port+":"+config.Port))

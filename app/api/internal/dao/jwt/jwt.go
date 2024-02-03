@@ -39,12 +39,14 @@ func CheckToken() gin.HandlerFunc {
 			c.JSON(401, gin.H{
 				"msg": "token wrong or expired",
 			})
+			return
 		}
 		global.Logger.Info(token.Claims.(*model.MyClaims).Username + "'s token correct")
 		c.Next()
 	}
 }
 func Test(c *gin.Context) {
+
 	c.JSON(200, gin.H{
 		"msg": "test",
 	})

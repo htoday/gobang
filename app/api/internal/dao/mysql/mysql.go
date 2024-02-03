@@ -16,6 +16,13 @@ CREATE TABLE `gobangUsers` (
 	PRIMARY KEY(`id`)
 )ENGINE=InnoDB AUTO_INCREMENT=1 CHARSET=utf8mb4;
 `avatar` LONGBLOB,
+CREATE TABLE user_followers (
+id INT AUTO_INCREMENT PRIMARY KEY,
+user_id BIGINT,
+follower_id BIGINT,
+FOREIGN KEY (user_id) REFERENCES gobangUsers(id),
+FOREIGN KEY (follower_id) REFERENCES gobangUsers(id)
+);
 */
 
 func CheckUser(username1 string) (bool, error) {
@@ -65,4 +72,46 @@ func GetNickname(username string) (string, error) {
 	var nickname string
 	err := global.MysqlDB.Get(&nickname, sqlstr, username)
 	return nickname, err
+}
+func GetUid(username string) (int, error) {
+	sqlstr := "SELECT id FROM gobangUsers where username = ?"
+	var id int
+	err := global.MysqlDB.Get(&id, sqlstr, username)
+	return id, err
+}
+func AddFriend(targetUid int, followerUid int) error {
+	sqlStr := "insert into user_followers(user_id,follower_id) values (?,?)"
+	_, err := global.MysqlDB.Exec(sqlStr, targetUid, followerUid)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+func DelFriend(targetUid int, followerUid int) error {
+	sqlStr := "DELETE FROM user_followers WHERE user_id = ? AND follower_id=?"
+	_, err := global.MysqlDB.Exec(sqlStr, targetUid, followerUid)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+func GetUserInformationFromID(id int) (model.User, error) {
+	sqlstr := "SELECT * FROM gobangUsers where id = ?"
+	var user1 model.User
+	err := global.MysqlDB.Get(&user1, sqlstr, id)
+	if err != nil {
+		return user1, err
+	}
+	return user1, nil
+}
+func UpdateStar(winner string, loser string) {
+	_, _ = global.MysqlDB.Exec("UPDATE gobangUsers SET starAmount = starAmount + 1 WHERE username = ?", winner)
+	sqlstr := "SELECT starAmount FROM gobangUsers where username = ?"
+	var loserStar int
+	_ = global.MysqlDB.Get(&loserStar, sqlstr, loser)
+	if loserStar == 0 {
+		return
+	} else {
+		_, _ = global.MysqlDB.Exec("UPDATE gobangUsers SET starAmount = starAmount + 1 WHERE username = ?", loser)
+	}
 }

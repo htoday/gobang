@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/goccy/go-json"
 	"gobang/app/api/global"
+	"gobang/app/api/internal/dao/mysql"
 	"gobang/app/api/internal/model"
 	"math/rand"
 	"strconv"
@@ -99,6 +100,9 @@ func PutChess(c *gin.Context) {
 			thisGame.CheckBoard[m.Row][m.Col] = 1 //1为黑子
 			if CheckWin(thisGame.CheckBoard, 1, m.Row, m.Col) {
 				thisRoom.RoomStatus = 3
+				if thisRoom.Ranking == true {
+					mysql.UpdateStar(thisRoom.User1, thisRoom.User2)
+				}
 				err = UpdateRoom(thisRoom, thisRoom.RoomID)
 				if err != nil {
 					global.Logger.Warn("Update Room Ready failed," + err.Error())
@@ -113,6 +117,9 @@ func PutChess(c *gin.Context) {
 			thisGame.CheckBoard[m.Row][m.Col] = 2 //2为白子
 			if CheckWin(thisGame.CheckBoard, 2, m.Row, m.Col) {
 				thisRoom.RoomStatus = 4
+				if thisRoom.Ranking == true {
+					mysql.UpdateStar(thisRoom.User2, thisRoom.User1)
+				}
 				err = UpdateRoom(thisRoom, thisRoom.RoomID)
 				if err != nil {
 					global.Logger.Warn("Update Room Ready failed," + err.Error())
@@ -129,6 +136,9 @@ func PutChess(c *gin.Context) {
 		if thisGame.Turn == 1 { //轮到玩家一行动
 			thisGame.CheckBoard[m.Row][m.Col] = 2
 			if CheckWin(thisGame.CheckBoard, 2, m.Row, m.Col) {
+				if thisRoom.Ranking == true {
+					mysql.UpdateStar(thisRoom.User1, thisRoom.User2)
+				}
 				thisRoom.RoomStatus = 3
 				err = UpdateRoom(thisRoom, thisRoom.RoomID)
 				if err != nil {
@@ -154,6 +164,9 @@ func PutChess(c *gin.Context) {
 			thisGame.CheckBoard[m.Row][m.Col] = 1 //1为黑子
 			if CheckWin(thisGame.CheckBoard, 1, m.Row, m.Col) {
 				thisRoom.RoomStatus = 4
+				if thisRoom.Ranking == true {
+					mysql.UpdateStar(thisRoom.User2, thisRoom.User1)
+				}
 				err = UpdateRoom(thisRoom, thisRoom.RoomID)
 				if err != nil {
 					global.Logger.Warn("Update Room Ready failed," + err.Error())

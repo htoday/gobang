@@ -133,7 +133,7 @@ func CreatRoom(c *gin.Context) {
 		User2:         "",
 		UserNickname1: nickname,
 		UserNickname2: "",
-		Ranking:       false,
+		Ranking:       m.Ranking,
 		RoomPassword:  m.RoomPassword,
 		Forbidden:     m.Forbidden,
 		RoomStatus:    0,
@@ -303,11 +303,15 @@ func LeaveRoom(c *gin.Context) {
 	if thisRoom.User2 == m.Username {
 		thisRoom.User2 = ""
 		thisRoom.UserNickname2 = ""
+		if thisRoom.RoomStatus == 1 && thisRoom.Ranking == true {
+			go ResetRoom(thisRoom.RoomID)
+			mysql.UpdateStar(thisRoom.User1, thisRoom.User2)
+		}
 		err = UpdateRoom(thisRoom, thisRoom.RoomID)
 	}
 	//房主为空就删房间
 	if thisRoom.User1 == "" {
-		err = DelRoom(thisRoom.RoomID)
+		err = DelRoom(thisRoom)
 		if err != nil {
 			global.Logger.Warn("Delete room failed," + err.Error())
 			c.JSON(400, gin.H{
@@ -322,9 +326,13 @@ func LeaveRoom(c *gin.Context) {
 	})
 	return
 }
-func DelRoom(roomID int) error {
+func DelRoom(thisRoom Room) error {
 	ctx := context.Background()
-	err := global.RDB.HDel(ctx, "rooms", strconv.Itoa(roomID)).Err()
+	err := global.RDB.HDel(ctx, "rooms", strconv.Itoa(thisRoom.RoomID)).Err()
+	if err != nil {
+		return err
+	}
+	err = global.RDB.HDel(ctx, "games", strconv.Itoa(thisRoom.RoomID)).Err()
 	if err != nil {
 		return err
 	}
@@ -554,7 +562,7 @@ func GetRoomInformation(c *gin.Context) {
 	roomJSON, err := global.RDB.HGet(ctx, "rooms", strconv.Itoa(roomID)).Result()
 	if err != nil {
 		global.Logger.Warn("translate JSON into room failed," + err.Error())
-		c.JSON(400, gin.H{
+		c.JSON(404, gin.H{
 			"msg": "translate JSON into room failed," + err.Error(),
 		})
 		return
@@ -614,7 +622,7 @@ func GetRoomInformation(c *gin.Context) {
 	})
 }
 func ResetRoom(roomID int) {
-	time.Sleep(time.Second * 6)
+	time.Sleep(time.Second * 3)
 	thisRoom, err := GetRoom(roomID)
 	if err != nil {
 		global.Logger.Error("get room failed" + err.Error())
@@ -626,6 +634,64 @@ func ResetRoom(roomID int) {
 	}
 	err = UpdateRoom(thisRoom, thisRoom.RoomID)
 	err = UpdateGame(thisGame, thisGame.RoomID)
+}
+func ChangeRanking(c *gin.Context) {
+	var m model.Message
+	ctx := context.Background()
+	err := c.ShouldBindJSON(&m)
+	if err != nil {
+		global.Logger.Warn("get roomID failed," + err.Error())
+		c.JSON(400, gin.H{
+			"msg": "get roomID failed," + err.Error(),
+		})
+		return
+	}
+	//判断名字为空的情况
+	if m.Username == "" {
+		global.Logger.Warn("username cannot empty")
+		c.JSON(400, gin.H{
+			"msg": "username cannot empty",
+		})
+		return
+	}
+	roomID := m.RoomID
+	roomJSON, err := global.RDB.HGet(ctx, "rooms", strconv.Itoa(roomID)).Result()
+	if err != nil {
+		global.Logger.Warn("translate JSON into room failed," + err.Error())
+		c.JSON(400, gin.H{
+			"msg": "translate JSON into room failed," + err.Error(),
+		})
+		return
+	}
+	//反序列化
+	var thisRoom Room
+	err = json.Unmarshal([]byte(roomJSON), &thisRoom)
+	if err != nil {
+		global.Logger.Warn("Unmarshal JSON failed," + err.Error())
+		c.JSON(400, gin.H{
+			"msg": "Unmarshal JSON failed," + err.Error(),
+		})
+		return
+	}
+
+	if thisRoom.Ranking == true {
+		thisRoom.Ranking = false
+
+	} else {
+		thisRoom.Ranking = true
+	}
+	err = UpdateRoom(thisRoom, thisRoom.RoomID)
+	if err != nil {
+		global.Logger.Warn("Update Room Ready failed," + err.Error())
+		c.JSON(400, gin.H{
+			"msg": "Update Room Ready failed," + err.Error(),
+		})
+		return
+	}
+	global.Logger.Info("ranking changed in room " + strconv.Itoa(thisRoom.RoomID))
+	c.JSON(200, gin.H{
+		"msg": "ranking changed in room " + strconv.Itoa(thisRoom.RoomID),
+	})
 }
 func RoomChat() {
 

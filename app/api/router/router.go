@@ -9,7 +9,8 @@ import (
 
 func InitRouter(port string) error {
 	r := gin.Default()
-	r.Use(static.Serve("/", static.LocalFile("./dist(30)", false)))
+	//v1 := r.Group("").Use(jwt.CheckToken())
+	r.Use(static.Serve("/", static.LocalFile("./dist(38)", false)))
 	r.POST("/registerPackage", service.Register)
 	r.POST("/loginPackage", service.Login)
 	r.GET("/checkLoginPackage", jwt.Test)
@@ -25,12 +26,18 @@ func InitRouter(port string) error {
 	r.POST("/changeFirstActionPackage", service.SetFirstAct)
 	r.POST("/playerReadyPackage", service.RoomReady)
 	r.POST("/changeForbiddenPackage", service.ChangeForbidden)
-	//v1 := r.Group("").Use() //jwt.CheckToken()
+	r.POST("/changeRankingPackage", service.ChangeRanking)
+	r.POST("/addFriendPackage", service.AddFriend)
+	r.POST("/deleteFriendPackage", service.DelFriend)
+	r.POST("/confirmOnlinePackage", service.SetUserOnline)
+	r.POST("/getFriendDataPackage", service.GetFriendList)
+	r.POST("/getRankDataPackage", service.GetRankList)
+	//v1 := r.Group("").Use(jwt.CheckToken())
+	//jwt.CheckToken()
 	//v1.POST("/gameHall/creatRoom", service.CreatRoom)
-
 	r.NoRoute(func(c *gin.Context) {
 		// 在这里处理没有匹配到路由的情况，可以返回默认的文件或处理程序
-		c.File("./dist(30)/index.html")
+		c.File("./dist(38)/index.html")
 	})
 	err := r.Run(":" + port)
 	if err != nil {
