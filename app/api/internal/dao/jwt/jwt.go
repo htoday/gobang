@@ -30,7 +30,14 @@ func UseJWT(username string) string {
 func CheckToken() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		MySigningKey := []byte("666")
-		str := c.GetHeader("token")
+		str := c.GetHeader("Authorization")
+		if str == "" {
+			c.JSON(401, gin.H{
+				"msg": "token缺失",
+			})
+			c.Abort() // 结束请求处理
+			return
+		}
 		token, err := jwt.ParseWithClaims(str, &model.MyClaims{}, func(token *jwt.Token) (interface{}, error) {
 			return MySigningKey, nil
 		})
@@ -39,6 +46,7 @@ func CheckToken() gin.HandlerFunc {
 			c.JSON(401, gin.H{
 				"msg": "token wrong or expired",
 			})
+			c.Abort() // 结束请求处理
 			return
 		}
 		global.Logger.Info(token.Claims.(*model.MyClaims).Username + "'s token correct")

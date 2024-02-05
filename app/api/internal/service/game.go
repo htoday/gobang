@@ -600,6 +600,33 @@ func JudgeLongForbidden(a [][]int, x int, y int) bool {
 	if length == 5 {
 		return true
 	}
+	//斜着从另一个方向找
+	length = 1
+	i = x - 1
+	j = y + 1
+	for i >= 0 && j >= 0 {
+		if a[i][j] == color {
+			length++
+		} else {
+			break
+		}
+		i--
+		j++
+	}
+	i = x + 1
+	j = y - 1
+	for i <= 14 && j <= 14 {
+		if a[i][j] == color {
+			length++
+		} else {
+			break
+		}
+		i++
+		j--
+	}
+	if length == 5 {
+		return true
+	}
 	return false
 }
 func CheckWin(a [][]int, color int, x int, y int) bool {
@@ -665,6 +692,33 @@ func CheckWin(a [][]int, color int, x int, y int) bool {
 		}
 		i++
 		j++
+	}
+	if length >= 5 {
+		return true
+	}
+	//斜着从另一个方向找
+	length = 1
+	i = x - 1
+	j = y + 1
+	for i >= 0 && j >= 0 {
+		if a[i][j] == color {
+			length++
+		} else {
+			break
+		}
+		i--
+		j++
+	}
+	i = x + 1
+	j = y - 1
+	for i <= 14 && j <= 14 {
+		if a[i][j] == color {
+			length++
+		} else {
+			break
+		}
+		i++
+		j--
 	}
 	if length >= 5 {
 		return true

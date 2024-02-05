@@ -2294,3 +2294,352 @@
 {"level":"info","time":"2024-02-03T23:00:32.246+0800","message":"init server success","port":"8080:8080"}
 {"level":"info","time":"2024-02-03T23:00:41.063+0800","message":"get FriendList success"}
 {"level":"info","time":"2024-02-03T23:00:43.843+0800","message":"get FriendList success"}
+{"level":"fatal","time":"2024-02-05T01:46:29.488+0800","message":"connect to my sql failed:dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"info","time":"2024-02-05T01:46:53.854+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T01:46:53.869+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T01:46:53.870+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T01:47:08.063+0800","message":"username acac existed in redis"}
+{"level":"info","time":"2024-02-05T01:47:08.069+0800","message":"acac login success"}
+{"level":"info","time":"2024-02-05T01:47:08.070+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T01:47:08.083+0800","message":"get information success,"}
+{"level":"info","time":"2024-02-05T01:47:09.115+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:47:19.985+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-02-05T01:47:19.989+0800","message":"abab login success"}
+{"level":"info","time":"2024-02-05T01:47:19.990+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T01:47:19.997+0800","message":"get information success,"}
+{"level":"info","time":"2024-02-05T01:47:20.665+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:47:23.503+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:47:28.271+0800","message":"save room information success"}
+{"level":"info","time":"2024-02-05T01:47:29.413+0800","message":"acacready success"}
+{"level":"info","time":"2024-02-05T01:47:30.811+0800","message":"ababready success"}
+{"level":"info","time":"2024-02-05T01:47:34.857+0800","message":"start game!! in room 1"}
+{"level":"info","time":"2024-02-05T01:47:35.449+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:36.546+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:37.952+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:39.744+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:41.032+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:43.027+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:44.994+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:46.122+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:47.560+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:48.587+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:47:49.934+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:48:02.464+0800","message":"abableave 1 success"}
+{"level":"info","time":"2024-02-05T01:48:02.552+0800","message":"get room information success"}
+{"level":"warn","time":"2024-02-05T01:48:03.281+0800","message":"translate JSON into room failed,redis: nil"}
+{"level":"info","time":"2024-02-05T01:48:03.339+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:48:03.671+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:48:05.312+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:48:10.288+0800","message":"save room information success,"}
+{"level":"info","time":"2024-02-05T01:48:11.125+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:48:12.484+0800","message":"get room information success"}
+{"level":"warn","time":"2024-02-05T01:48:14.233+0800","message":"password wrong"}
+{"level":"info","time":"2024-02-05T01:48:18.577+0800","message":"save room information success"}
+{"level":"info","time":"2024-02-05T01:48:20.024+0800","message":"ababready success"}
+{"level":"info","time":"2024-02-05T01:48:22.625+0800","message":"forbidden changed in room 1"}
+{"level":"info","time":"2024-02-05T01:48:28.553+0800","message":"acacready success"}
+{"level":"info","time":"2024-02-05T01:48:29.390+0800","message":"start game!! in room 1"}
+{"level":"info","time":"2024-02-05T01:48:30.166+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:48:31.483+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:48:32.675+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:48:33.891+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:48:35.066+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:48:36.059+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:48:37.270+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:48:38.729+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:49:05.472+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T01:49:05.486+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T01:49:05.486+0800","message":"init server success","port":"8080:8080"}
+{"level":"warn","time":"2024-02-05T01:49:43.677+0800","message":"translate JSON into room failed,dial tcp :6379: i/o timeout"}
+{"level":"warn","time":"2024-02-05T01:49:55.828+0800","message":"translate JSON into game failed,dial tcp :6379: i/o timeout"}
+{"level":"warn","time":"2024-02-05T01:52:09.920+0800","message":"translate JSON into game failed,dial tcp :6379: i/o timeout"}
+{"level":"info","time":"2024-02-05T01:52:09.927+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:52:24.858+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T01:52:24.873+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T01:52:24.874+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T01:52:25.037+0800","message":"get room information success"}
+{"level":"warn","time":"2024-02-05T01:52:25.038+0800","message":"acac have entered room"}
+{"level":"warn","time":"2024-02-05T01:52:31.016+0800","message":"acac have entered room"}
+{"level":"info","time":"2024-02-05T01:52:38.398+0800","message":"abableave 1 success"}
+{"level":"info","time":"2024-02-05T01:52:38.472+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:52:42.905+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:52:45.366+0800","message":"acacleave 1 success"}
+{"level":"info","time":"2024-02-05T01:52:45.422+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:52:50.124+0800","message":"save room information success,"}
+{"level":"info","time":"2024-02-05T01:52:51.027+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:52:58.326+0800","message":"save room information success"}
+{"level":"info","time":"2024-02-05T01:52:59.672+0800","message":"ababready success"}
+{"level":"info","time":"2024-02-05T01:53:00.922+0800","message":"acacready success"}
+{"level":"info","time":"2024-02-05T01:53:44.807+0800","message":"start game!! in room 1"}
+{"level":"info","time":"2024-02-05T01:53:45.865+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:53:47.015+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:53:49.353+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:53:50.420+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:53:51.867+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:53:52.837+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:53:53.915+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:53:54.790+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:54:00.248+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T01:54:00.265+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T01:54:00.265+0800","message":"init server success","port":"8080:8080"}
+{"level":"warn","time":"2024-02-05T01:54:46.887+0800","message":"translate JSON into game failed,dial tcp :6379: i/o timeout"}
+{"level":"warn","time":"2024-02-05T01:54:47.274+0800","message":"translate JSON into room failed,i/o timeout"}
+{"level":"info","time":"2024-02-05T01:56:34.823+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:57:57.662+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T01:57:57.675+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T01:57:57.675+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T01:58:01.413+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T01:58:13.947+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:58:15.417+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T01:59:31.260+0800","message":"acacleave 1 success"}
+{"level":"info","time":"2024-02-05T01:59:31.320+0800","message":"get room information success"}
+{"level":"warn","time":"2024-02-05T01:59:32.693+0800","message":"translate JSON into room failed,redis: nil"}
+{"level":"fatal","time":"2024-02-05T21:14:33.037+0800","message":"connect to my sql failed:dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"info","time":"2024-02-05T21:15:00.115+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:15:00.137+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:15:00.137+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:15:07.224+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-02-05T21:15:07.234+0800","message":"abab login success"}
+{"level":"info","time":"2024-02-05T21:15:07.237+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T21:15:07.244+0800","message":"get information success,"}
+{"level":"info","time":"2024-02-05T21:15:26.811+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:15:26.830+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:15:26.830+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:15:37.037+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:15:37.051+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:15:37.051+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:15:52.648+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-02-05T21:15:52.653+0800","message":"abab login success"}
+{"level":"info","time":"2024-02-05T21:15:52.655+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T21:15:52.664+0800","message":"get information success,"}
+{"level":"info","time":"2024-02-05T21:16:40.942+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:16:40.963+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:16:40.963+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:17:08.450+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-02-05T21:17:08.466+0800","message":"abab login success"}
+{"level":"info","time":"2024-02-05T21:17:08.467+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T21:17:08.474+0800","message":"get information success,"}
+{"level":"info","time":"2024-02-05T21:20:40.441+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:20:40.453+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:20:40.453+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:21:13.881+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:21:13.894+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:21:13.894+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:21:31.541+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:21:31.557+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:21:31.557+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:21:38.606+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-02-05T21:21:38.614+0800","message":"abab login success"}
+{"level":"info","time":"2024-02-05T21:21:38.615+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T21:21:38.633+0800","message":"get information success,"}
+{"level":"info","time":"2024-02-05T21:23:26.967+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:23:26.985+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:23:26.985+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:23:35.711+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-02-05T21:23:35.719+0800","message":"abab login success"}
+{"level":"info","time":"2024-02-05T21:23:35.720+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T21:23:35.732+0800","message":"get information success,"}
+{"level":"info","time":"2024-02-05T21:26:14.601+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:26:14.613+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:26:14.613+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:26:18.318+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-02-05T21:26:18.325+0800","message":"abab login success"}
+{"level":"info","time":"2024-02-05T21:26:18.326+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T21:26:18.370+0800","message":"get FriendList success"}
+{"level":"info","time":"2024-02-05T21:26:21.243+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-02-05T21:26:21.249+0800","message":"abab login success"}
+{"level":"info","time":"2024-02-05T21:26:21.250+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T21:26:21.260+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T21:33:53.587+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:33:53.603+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:33:53.603+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:34:00.460+0800","message":"username abab existed in redis"}
+{"level":"info","time":"2024-02-05T21:34:00.467+0800","message":"abab login success"}
+{"level":"info","time":"2024-02-05T21:34:00.469+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T21:34:00.482+0800","message":"get information success,"}
+{"level":"info","time":"2024-02-05T21:34:01.564+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:34:01.572+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T21:43:11.585+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:43:11.598+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:43:11.598+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:43:17.644+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:17.662+0800","message":"save room information success,"}
+{"level":"info","time":"2024-02-05T21:43:18.633+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:18.645+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T21:43:30.814+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:30.822+0800","message":"forbidden changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:31.648+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:31.653+0800","message":"forbidden changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:32.093+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:32.098+0800","message":"forbidden changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:32.845+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:32.851+0800","message":"forbidden changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:33.838+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:33.846+0800","message":"ranking changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:34.396+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:34.403+0800","message":"ranking changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:34.894+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:34.899+0800","message":"ranking changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:35.507+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:35.514+0800","message":"ranking changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:36.142+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:36.151+0800","message":"ranking changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:37.671+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:37.679+0800","message":"ranking changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:38.252+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:38.260+0800","message":"forbidden changed in room 1"}
+{"level":"info","time":"2024-02-05T21:43:45.533+0800","message":"username acac existed in redis"}
+{"level":"info","time":"2024-02-05T21:43:45.537+0800","message":"acac login success"}
+{"level":"info","time":"2024-02-05T21:43:45.538+0800","message":"set online success"}
+{"level":"info","time":"2024-02-05T21:43:45.548+0800","message":"get information success,"}
+{"level":"info","time":"2024-02-05T21:43:46.678+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:43:46.692+0800","message":"get room information success"}
+{"level":"info","time":"2024-02-05T21:43:53.231+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:43:53.246+0800","message":"save room information success"}
+{"level":"info","time":"2024-02-05T21:43:54.588+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:43:54.595+0800","message":"acacready success"}
+{"level":"info","time":"2024-02-05T21:43:57.182+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:57.189+0800","message":"ababready success"}
+{"level":"info","time":"2024-02-05T21:43:57.744+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:57.757+0800","message":"start game!! in room 1"}
+{"level":"info","time":"2024-02-05T21:43:58.995+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:43:59.009+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:00.252+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:00.260+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:01.345+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:01.352+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:02.457+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:02.467+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:03.745+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:03.754+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:04.907+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:04.914+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:06.470+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:06.478+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:07.529+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:07.537+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:09.627+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:09.633+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:10.652+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:10.660+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:12.099+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:13.737+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:16.088+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:16.094+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:17.355+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:17.364+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:18.674+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:18.682+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:19.645+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:19.652+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:20.818+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:20.826+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:21.994+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:22.002+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:23.135+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:23.142+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:24.451+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:24.458+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:25.886+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:25.894+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:27.888+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:30.944+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:30.952+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:32.480+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:32.505+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:50.554+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:44:50.561+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:44:52.206+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:44:52.216+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:46:40.017+0800","message":"init mysql success"}
+{"level":"info","time":"2024-02-05T21:46:40.036+0800","message":"init redis success"}
+{"level":"info","time":"2024-02-05T21:46:40.036+0800","message":"init server success","port":"8080:8080"}
+{"level":"info","time":"2024-02-05T21:46:43.782+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:46:43.789+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:46:45.561+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:46:49.441+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:46:49.449+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:46:51.150+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:46:51.158+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:46:52.374+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:46:52.382+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:46:53.287+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:46:53.296+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:46:54.402+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:46:54.410+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:46:55.436+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:46:57.923+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:46:57.932+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:46:59.392+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:46:59.402+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:00.710+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:01.924+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:02.607+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:03.000+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:03.367+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:04.013+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:04.020+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:07.048+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:09.577+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:12.194+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:12.745+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:14.839+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:15.752+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:15.761+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:23.291+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:23.299+0800","message":"start game!! in room 1"}
+{"level":"info","time":"2024-02-05T21:47:24.250+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:24.262+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:25.564+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:25.571+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:26.867+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:26.875+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:28.061+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:28.067+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:29.435+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:29.441+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:30.561+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:30.568+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:32.255+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:32.262+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:33.225+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:47:33.233+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:47:34.997+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:47:35.006+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:22.511+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:50:22.521+0800","message":"start game!! in room 1"}
+{"level":"info","time":"2024-02-05T21:50:23.699+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:50:23.706+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:30.438+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:50:30.445+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:32.098+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:50:32.106+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:33.266+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:50:33.273+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:35.392+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:50:35.399+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:36.515+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:50:36.524+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:38.412+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:50:38.420+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:40.547+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:50:40.555+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:42.056+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:50:42.065+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:50:43.467+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:50:43.474+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:51:02.937+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:51:09.436+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:51:09.445+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:51:11.148+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:51:11.158+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:51:13.201+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:51:13.208+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:51:14.436+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:51:14.443+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:51:16.218+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:51:16.225+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:51:17.326+0800","message":"acac's token correct"}
+{"level":"info","time":"2024-02-05T21:51:17.332+0800","message":"put chess success"}
+{"level":"info","time":"2024-02-05T21:51:19.306+0800","message":"abab's token correct"}
+{"level":"info","time":"2024-02-05T21:51:19.316+0800","message":"put chess success"}

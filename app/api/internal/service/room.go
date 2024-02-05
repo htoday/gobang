@@ -622,7 +622,7 @@ func GetRoomInformation(c *gin.Context) {
 	})
 }
 func ResetRoom(roomID int) {
-	time.Sleep(time.Second * 3)
+	time.Sleep(time.Second * 4)
 	thisRoom, err := GetRoom(roomID)
 	if err != nil {
 		global.Logger.Error("get room failed" + err.Error())

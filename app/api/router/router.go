@@ -9,11 +9,11 @@ import (
 
 func InitRouter(port string) error {
 	r := gin.Default()
-	//v1 := r.Group("").Use(jwt.CheckToken())
+	v1 := r.Group("").Use(jwt.CheckToken())
+	v1.GET("/checkLoginPackage", jwt.Test)
 	r.Use(static.Serve("/", static.LocalFile("./dist(38)", false)))
 	r.POST("/registerPackage", service.Register)
 	r.POST("/loginPackage", service.Login)
-	r.GET("/checkLoginPackage", jwt.Test)
 	r.POST("/getInformationPackage", service.GetUserInformation)
 	r.POST("/editInformationPackage", service.EditUserInformation)
 	r.POST("/getRoomListPackage", service.GetRoomList)
